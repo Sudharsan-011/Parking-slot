@@ -16,6 +16,7 @@ app.use(morgan("dev")); // Logs requests in console
 
 // ===== Routes =====
 app.use("/api/auth", authRoutes);
+app.use("/parking", require("./routes/parkingRoutes"));
 
 app.get("/", (req, res) => {
   res.send("🚗 Parking Lot System Backend Running Successfully");
